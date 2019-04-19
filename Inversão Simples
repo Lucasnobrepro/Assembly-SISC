@@ -1,0 +1,22 @@
+%include "io.inc"
+
+section .data
+    array DW 1,2,3,4
+    
+
+section .text    
+
+global CMAIN
+CMAIN:
+    mov ebp, esp; for correct debugging
+    ;write your code here
+    mov ax, [array]
+    mov bx, [array+6]
+    mov [array+6], ax
+    mov [array], bx
+    mov bx, [array+4]
+    mov ax, [array+2]
+    mov [array+4], ax
+    mov [array+2], bx
+    xor eax, eax
+    ret

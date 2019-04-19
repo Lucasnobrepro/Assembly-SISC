@@ -1,0 +1,19 @@
+%include "io.inc"
+
+section .bss
+    soma RESB 1
+    a    RESB 1
+    b    RESB 1
+
+section .text
+global CMAIN
+CMAIN:
+    ;write your code here
+    GET_DEC 1, a
+    GET_DEC 1, b
+    mov al, [a]       ;Movo o valor de "a" para o resgitrador "al"
+    add al, [b]       ;Somo "b" em "al"
+    mov [soma], al
+    PRINT_DEC 1, soma ;Print 
+    xor eax, eax
+    ret
