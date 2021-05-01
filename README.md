@@ -1,4 +1,4 @@
-# Assembly-SISC---2018.1
+# Assembly-SISC
 Programas construidos em Assemblyx86
 
 ## Calculadora.asm
